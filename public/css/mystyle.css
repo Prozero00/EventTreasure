@@ -1,0 +1,16 @@
+*, html, body {
+    margin : 0;
+    padding : 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+ 
+ /* Hover Effect for Navigation Links */
+ .custom-hover:hover {
+    color: crimson !important;
+  }
+
+  /* Smooth transition for hover effects */
+  .custom-hover {
+    transition: color 0.3s ease;
+  }
