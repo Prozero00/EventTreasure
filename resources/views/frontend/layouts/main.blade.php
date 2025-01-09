@@ -26,19 +26,19 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mystyle.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/stylesignup.css') }}" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/mystyle.css">
 </head>
 
-<body>
+<body style="background-color: #f3f4f6;">
 
     @include('frontend.layouts.navbar')
 
 
-            @yield('content')
+    @yield('content')
 
 
     @include('frontend.layouts.footer')
@@ -57,6 +57,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

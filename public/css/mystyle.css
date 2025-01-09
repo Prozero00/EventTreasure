@@ -14,3 +14,197 @@
   .custom-hover {
     transition: color 0.3s ease;
   }
+
+  .gradient-text {
+    font-weight: bold;
+    font-size: 2rem;
+    background: linear-gradient(to right, white, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.newest-event {
+  padding: 20px;
+  background-color: #ffffff;
+  align-items: center;
+  width: 100%;
+}
+
+.newest-event h3 {
+  font-size: 36px;
+  color: #03045e;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.newest-event h3 span{
+  font-size: 36px;
+  color: crimson;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.carousel-image {
+  object-fit: cover; /* Ensures the image covers the container without distorting */
+  width: 400px; /* Set a fixed height for all carousel images */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* .carousel {
+    
+  white-space: nowrap;
+  display: flex;
+  gap: 10px;
+  scroll-behavior: smooth;
+  size: fit;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-item {
+  display: inline-block;
+  max-width: 200px;
+  height: fit-content;
+  text-align: center;
+  align-items: center;
+
+  
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+} */
+
+.carousel-item p {
+  padding: 10px;
+  background-color: #03045e;
+  color: #ffffff;
+  margin: 0;
+  font-size: 12px;
+}
+
+
+/*Discount*/
+.discount {
+  /*background-image: url('images/bg1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;*/
+  height: 600px; 
+  display: flex;
+  justify-content: right; 
+  align-items: right;
+  margin-top: -10px;
+  margin-right: 10px;
+}
+
+.discount img{
+  max-width: 100%; 
+  max-height: 80%; 
+  position: relative;
+  z-index: 1; 
+}
+
+.offer {
+  margin-top: 150px;
+  margin-left: 30px;
+  justify-content: left; 
+  align-items: left;
+  font-size: 18px;
+  color: #03045e;
+}
+
+/* Contact Container */
+/* .contact-container {
+  display: flex;
+  gap: 30px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
+} */
+
+/* Feedback Form */
+ .feedback-form {
+  flex: 1;
+  background-color: white;
+  padding: 20%;
+} 
+
+.feedback-form h2 {
+  margin-bottom: 15px;
+  color: #03045e;
+}
+/* 
+.feedback-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+} */
+
+/* .feedback-form input, 
+.feedback-form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: inherit;
+} */
+
+.feedback-form button, .container form button, .card-body .text-center a {
+  background-color: #03045e;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-form button:hover, .container button:hover, .card-body div a:hover{
+  background-color: crimson;
+  transition: background-color 0.3s ease;
+}
+
+/* Contact Info
+.contact-info {
+  flex: 1;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;;
+}
+
+.contact-info h2 {
+  margin-bottom: 15px;
+  color: #03045e;
+}
+
+.contact-info p {
+  margin: 10px 10px;
+  line-height: 1.5;
+  font-size: 16px;
+} */
+ 
+.card-img-top {
+  width: 100%; /* Ensures the image fills the card width */
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Crop the image to fit the dimensions without distortion */
+  border-radius: 5px; /* Optional: smooth corner edges */
+}
