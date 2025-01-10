@@ -40,7 +40,7 @@
                 <input type="number" name="seats" id="seats" class="form-control" min="1" required>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary button" style="max-width: 500px;">Reserve Now</button>
+                <button type="submit" class="btn btn-primary" style="max-width: 500px;">Reserve Now</button>
             </div>
         </form>
         @else

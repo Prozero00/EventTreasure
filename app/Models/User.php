@@ -43,6 +43,13 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'role',
         ];
+    }
+
+    // Define the relationship with reservations
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
     }
 }

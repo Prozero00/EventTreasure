@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('image'); // Path to event image
             $table->decimal('price', 8, 2);
+            $table->date('date');
             $table->string('location'); 
             $table->text('description'); // Optional
             $table->timestamps();

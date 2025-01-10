@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\Messages;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EventController extends Controller
 {
@@ -17,32 +18,40 @@ class EventController extends Controller
         $price = $request->get('price');
         $location = $request->get('location');
         $keyword = $request->get('keyword');
-
+    
         // Build the query
         $query = Event::query();
-
+    
         if ($keyword) {
-            $query->where(function ($query) use ($request) {
-                $query->where('name', 'like', '%' . $request->keyword . '%')
-                      ->orWhere('description', 'like', '%' . $request->keyword . '%');
+            $query->where(function ($query) use ($keyword) {
+                $query->where('name', 'like', '%' . $keyword . '%')
+                      ->orWhere('description', 'like', '%' . $keyword . '%');
             });
         }
+    
         if ($price) {
             $query->where('price', '<=', $price);
         }
-
-        if ($location = $request->input('location')) {
-            $query->where(function ($query) use ($location) {
-                $query->where('location', 'like', '%' . $location . '%');
-            });
+    
+        if ($location) {
+            $query->where('location', 'like', '%' . $location . '%');
         }
-        
-
+    
+        // Handle sorting with validation
+        $validSortFields = ['name', 'price', 'location', 'created_at']; // Add all valid columns here
+        $sortField = $request->get('sort');
+        $sortDirection = $request->get('direction', 'asc'); // Default to ascending
+    
+        if ($sortField && in_array($sortField, $validSortFields)) {
+            $query->orderBy($sortField, $sortDirection);
+        }
+    
         // Get filtered events
         $events = $query->get();
-
+    
         return view('frontend.event', ['events' => $events]);
     }
+    
 
     /**
      * Show the form for creating a new resource.

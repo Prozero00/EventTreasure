@@ -14,4 +14,16 @@ class Reservation extends Model
         'email',
         'seats',
     ];
+
+    // Define the relationship with the event
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
+
+    // Define the relationship with the user
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
